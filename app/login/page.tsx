@@ -23,9 +23,9 @@ function LoginPage() {
             })
             if (result?.ok) {
                 console.log(result)
-            }else {
                 router.push("/")
-                
+            }else {
+                console.log(result)
             }
         }catch (error) {
             console.log(error)

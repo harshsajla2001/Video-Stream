@@ -10,32 +10,44 @@ function RegisterPage() {
 
     const router = useRouter()
 
-    const handleSubmit = async (e: React.FormEvent<HTMLFormElement>) => {
-        e.preventDefault()
-        try {
-            if (password === confirmPassword) {
-                alert("Password do not match")
-                return
+    const handleSubmit = async (e: React.MouseEvent<HTMLButtonElement>) => {
+        e.preventDefault();
+        console.log("📝 Submitting form with:", { email, password, confirmPassword });
 
+        try {
+            // ❌ You had the logic inverted here
+            if (password !== confirmPassword) {
+                console.warn("❌ Passwords do not match.");
+                alert("Passwords do not match");
+                return;
             }
+
+            console.log("📡 Sending registration request to /api/auth/register...");
+
             const res = await fetch("http://localhost:3000/api/auth/register", {
                 method: "POST",
                 headers: {
                     "Content-Type": "application/json",
                 },
                 body: JSON.stringify({ email, password }),
-            })
+            });
 
-            if (res.ok) {
-                throw new Error("Registration failed")
+            console.log("📬 Response received:", res);
+
+            // ❌ You had the success/failure check inverted
+            if (!res.ok) {
+                const errorData = await res.json();
+                console.error("❌ Registration failed:", errorData);
+                throw new Error(errorData.error || "Registration failed");
             }
 
-            console.log(res)
+            console.log("✅ Registration successful! Redirecting to /login...");
             router.push("/login");
         } catch (error) {
-            console.log(error)
+            console.error("❌ Error during registration:", error);
         }
-    }
+    };
+
     return (
 
         <div className="w-full h-screen flex justify-center items-center">
@@ -53,6 +65,7 @@ function RegisterPage() {
                     <label htmlFor="confirm-password" className="">Confirm Password</label>
                     <input type="password" name="confirm-password" id="confirm-password" className="" placeholder="Enter your password" value={confirmPassword} onChange={(e) => setConfirmPassword(e.target.value)} />
                 </div>
+                <button className="border text-white border-gray-300 text-gray-900 hover:bg-gray-50 focus:ring-4 focus:outline-none focus:ring-gray-200 font-medium rounded-lg text-sm px-5 py-2.5 text-center" onClick={handleSubmit}>Register</button>
             </div>
         </div>
     );

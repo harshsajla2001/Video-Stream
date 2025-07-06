@@ -20,7 +20,7 @@ export default withAuth(
                     return true
                 }
 
-                if(pathname == "/" || pathname.startsWith("/api/videos")) {
+                if(pathname.startsWith("/api/videos")) {
                     return true
                 }
 
@@ -30,4 +30,6 @@ export default withAuth(
     }
 )
 
-export const config = { matcher: ["/dashboard", "/profile"] }
+export const config = {
+  matcher: ["/((?!api/auth|login|register).*)"], // protect everything except these
+};

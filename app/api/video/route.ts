@@ -24,19 +24,37 @@ export async function GET() {
     }
 }
 
-export async function POST(request: NextRequest) {
 
+export async function POST(request: NextRequest) {
     try {
+        console.log("🔐 Checking session...");
         const session = await getServerSession(authOptions);
         if (!session) {
-            return NextResponse.json({ error: "You must be signed in to create a video" }, { status: 401 });
+            console.warn("❌ No session found. User is not authenticated.");
+            return NextResponse.json(
+                { error: "You must be signed in to create a video" },
+                { status: 401 }
+            );
         }
+        console.log("✅ Session active for user:", session.user?.email);
 
+        console.log("📡 Connecting to database...");
         await connetToDatabase();
-        const body: IVideo = await request.json();
+        console.log("✅ Connected to database.");
 
-        if (!body.title || !body.description || !body.videoUrl || !body.thubnailUrl) {
-            return NextResponse.json({ error: "Video data is required" }, { status: 400 });
+        const body: IVideo = await request.json();
+        console.log("📥 Request body received:", body);
+
+        if (!body.name || !body.url) {
+            console.warn("⚠️ Missing required video fields:", {
+                title: body.name,
+                description: body?.description,
+                videoUrl: body.url,
+            });
+            return NextResponse.json(
+                { error: "Video data is required" },
+                { status: 400 }
+            );
         }
 
         const videoData = {
@@ -46,13 +64,20 @@ export async function POST(request: NextRequest) {
                 height: 1920,
                 width: 1080,
                 quality: body.transformations?.quality ?? 100,
-            }
-        }
+            },
+        };
+
+        console.log("🛠️ Final videoData to be saved:", videoData);
 
         const newVideo = await Video.create(videoData);
+        console.log("✅ New video created with ID:", newVideo._id);
 
         return NextResponse.json(newVideo);
     } catch (error) {
-        return NextResponse.json({ error: "Failded to create video" }, { status: 500 });
+        console.error("🔥 Failed to create video:", error);
+        return NextResponse.json(
+            { error: "Failed to create video" },
+            { status: 500 }
+        );
     }
 }
