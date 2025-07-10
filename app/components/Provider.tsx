@@ -3,6 +3,8 @@
 import { ImageKitProvider } from "@imagekit/next";
 import { SessionProvider } from "next-auth/react";
 
+
+
 const urlEndPoint = process.env.NEXT_PUBLIC_URLENDPOINT!;
 
 export default function Provider({ children }: { children: React.ReactNode }) {
@@ -14,3 +16,4 @@ export default function Provider({ children }: { children: React.ReactNode }) {
         </SessionProvider>
     )
 }
+

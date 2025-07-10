@@ -1,13 +1,15 @@
 "use client";
 import React, { useEffect, useState } from 'react'
+import "../globals.css";
+
 
 interface Video {
-  _id: string;
-  title: string;
-  description: string;
-  videoUrl: string;
-  thumbnailUrl: string;
-  createdAt: string;
+    _id: string;
+    title: string;
+    description: string;
+    videoUrl: string;
+    thumbnailUrl: string;
+    createdAt: string;
 }
 function Feed() {
 
@@ -37,7 +39,11 @@ function Feed() {
     };
 
     return (
-        <div>Feed</div>
+        <div>
+            <h1>Feed</h1>
+
+
+        </div>
     )
 }
 
