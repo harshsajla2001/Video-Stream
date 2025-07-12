@@ -5,6 +5,7 @@ import Provider from "./components/Provider";
 import { SidebarProvider, SidebarTrigger } from "@/components/ui/sidebar"
 import { AppSidebar } from "@/components/app-sidebar"
 import ReduxProvider from '@/store/ReduxProvider'
+import TopNavBar from "@/components/topNavBar";
 
 const geistSans = Geist({
   variable: "--font-geist-sans",
@@ -35,10 +36,13 @@ export default function RootLayout({
 
           <Provider>
             <SidebarProvider>
-              <AppSidebar />
-              <main>
-                <SidebarTrigger />
-                {children}
+              <main className="flex w-full h-screen flex-col">
+                <TopNavBar />
+                <div className="flex ">
+                  <AppSidebar />
+                  {children}
+
+                </div>
               </main>
             </SidebarProvider>
           </Provider>

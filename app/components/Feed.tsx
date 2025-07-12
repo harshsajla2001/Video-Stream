@@ -39,8 +39,170 @@ function Feed() {
     };
 
     return (
-        <div>
-            <h1>Feed</h1>
+        <div className='flex gap-4 border-2 border-red-500 w-full'>
+            <div className="w-full flex-wrap justify-start flex gap-4 border-2 border-yellow-500 overflow-auto">
+
+                <div className="flex flex-col gap-4 w-1/4 h-40 border-2 border-blue-500">
+                    <div className="">
+                        <h1>Video card</h1>
+                    </div>
+                    <div className="flex flex-col gap-4">
+                        <h1>Video card heading</h1>
+                    </div>
+                </div>
+                <div className="flex flex-col gap-4 w-1/4 h-40 border-2 border-blue-500">
+                    <div className="">
+                        <h1>Video card</h1>
+                    </div>
+                    <div className="flex flex-col gap-4">
+                        <h1>Video card heading</h1>
+                    </div>
+                </div>
+                <div className="flex flex-col gap-4 w-1/4 h-40 border-2 border-blue-500">
+                    <div className="">
+                        <h1>Video card</h1>
+                    </div>
+                    <div className="flex flex-col gap-4">
+                        <h1>Video card heading</h1>
+                    </div>
+                </div>
+                <div className="flex flex-col gap-4 w-1/4 h-40 border-2 border-blue-500">
+                    <div className="">
+                        <h1>Video card</h1>
+                    </div>
+                    <div className="flex flex-col gap-4">
+                        <h1>Video card heading</h1>
+                    </div>
+                </div>
+                <div className="flex flex-col gap-4 w-1/4 h-40 border-2 border-blue-500">
+                    <div className="">
+                        <h1>Video card</h1>
+                    </div>
+                    <div className="flex flex-col gap-4">
+                        <h1>Video card heading</h1>
+                    </div>
+                </div>
+                <div className="flex flex-col gap-4 w-1/4 h-40 border-2 border-blue-500">
+                    <div className="">
+                        <h1>Video card</h1>
+                    </div>
+                    <div className="flex flex-col gap-4">
+                        <h1>Video card heading</h1>
+                    </div>
+                </div>
+                <div className="flex flex-col gap-4 w-1/4 h-40 border-2 border-blue-500">
+                    <div className="">
+                        <h1>Video card</h1>
+                    </div>
+                    <div className="flex flex-col gap-4">
+                        <h1>Video card heading</h1>
+                    </div>
+                </div>
+                <div className="flex flex-col gap-4 w-1/4 h-40 border-2 border-blue-500">
+                    <div className="">
+                        <h1>Video card</h1>
+                    </div>
+                    <div className="flex flex-col gap-4">
+                        <h1>Video card heading</h1>
+                    </div>
+                </div>
+                <div className="flex flex-col gap-4 w-1/4 h-40 border-2 border-blue-500">
+                    <div className="">
+                        <h1>Video card</h1>
+                    </div>
+                    <div className="flex flex-col gap-4">
+                        <h1>Video card heading</h1>
+                    </div>
+                </div>
+                <div className="flex flex-col gap-4 w-1/4 h-40 border-2 border-blue-500">
+                    <div className="">
+                        <h1>Video card</h1>
+                    </div>
+                    <div className="flex flex-col gap-4">
+                        <h1>Video card heading</h1>
+                    </div>
+                </div>
+                <div className="flex flex-col gap-4 w-1/4 h-40 border-2 border-blue-500">
+                    <div className="">
+                        <h1>Video card</h1>
+                    </div>
+                    <div className="flex flex-col gap-4">
+                        <h1>Video card heading</h1>
+                    </div>
+                </div>
+                <div className="flex flex-col gap-4 w-1/4 h-40 border-2 border-blue-500">
+                    <div className="">
+                        <h1>Video card</h1>
+                    </div>
+                    <div className="flex flex-col gap-4">
+                        <h1>Video card heading</h1>
+                    </div>
+                </div>
+                <div className="flex flex-col gap-4 w-1/4 h-40 border-2 border-blue-500">
+                    <div className="">
+                        <h1>Video card</h1>
+                    </div>
+                    <div className="flex flex-col gap-4">
+                        <h1>Video card heading</h1>
+                    </div>
+                </div>
+                <div className="flex flex-col gap-4 w-1/4 h-40 border-2 border-blue-500">
+                    <div className="">
+                        <h1>Video card</h1>
+                    </div>
+                    <div className="flex flex-col gap-4">
+                        <h1>Video card heading</h1>
+                    </div>
+                </div>
+                <div className="flex flex-col gap-4 w-1/4 h-40 border-2 border-blue-500">
+                    <div className="">
+                        <h1>Video card</h1>
+                    </div>
+                    <div className="flex flex-col gap-4">
+                        <h1>Video card heading</h1>
+                    </div>
+                </div>
+                <div className="flex flex-col gap-4 w-1/4 h-40 border-2 border-blue-500">
+                    <div className="">
+                        <h1>Video card</h1>
+                    </div>
+                    <div className="flex flex-col gap-4">
+                        <h1>Video card heading</h1>
+                    </div>
+                </div>
+                <div className="flex flex-col gap-4 w-1/4 h-40 border-2 border-blue-500">
+                    <div className="">
+                        <h1>Video card</h1>
+                    </div>
+                    <div className="flex flex-col gap-4">
+                        <h1>Video card heading</h1>
+                    </div>
+                </div>
+                <div className="flex flex-col gap-4 w-1/4 h-40 border-2 border-blue-500">
+                    <div className="">
+                        <h1>Video card</h1>
+                    </div>
+                    <div className="flex flex-col gap-4">
+                        <h1>Video card heading</h1>
+                    </div>
+                </div>
+                <div className="flex flex-col gap-4 w-1/4 h-40 border-2 border-blue-500">
+                    <div className="">
+                        <h1>Video card</h1>
+                    </div>
+                    <div className="flex flex-col gap-4">
+                        <h1>Video card heading</h1>
+                    </div>
+                </div>
+                <div className="flex flex-col gap-4 w-1/4 h-40 border-2 border-blue-500">
+                    <div className="">
+                        <h1>Video card</h1>
+                    </div>
+                    <div className="flex flex-col gap-4">
+                        <h1>Video card heading</h1>
+                    </div>
+                </div>
+            </div>
 
 
         </div>

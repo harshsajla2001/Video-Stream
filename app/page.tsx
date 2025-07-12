@@ -14,9 +14,9 @@ export default function Home() {
   };
 
   return (
-    <div className="flex items-center justify-center h-screen">
+    <div className="flex h-screen w-full border-2 border-black">
       <Feed />
-      <FileUpload onSuccess={handleSuccess} onProgress={handleProgress} fileType="video" />
+      {/* <FileUpload onSuccess={handleSuccess} onProgress={handleProgress} fileType="video" /> */}
     </div>
   );
 }
