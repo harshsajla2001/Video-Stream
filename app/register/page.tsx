@@ -65,7 +65,7 @@ function RegisterPage() {
                     <label htmlFor="confirm-password" className="">Confirm Password</label>
                     <input type="password" name="confirm-password" id="confirm-password" className="" placeholder="Enter your password" value={confirmPassword} onChange={(e) => setConfirmPassword(e.target.value)} />
                 </div>
-                <button className="border text-white border-gray-300 text-gray-900 hover:bg-gray-50 focus:ring-4 focus:outline-none focus:ring-gray-200 font-medium rounded-lg text-sm px-5 py-2.5 text-center" onClick={handleSubmit}>Register</button>
+                <button className=" text-gray-900 hover:bg-gray-50 focus:ring-4 focus:outline-none focus:ring-gray-200 font-medium rounded-lg text-sm px-5 py-2.5 text-center" onClick={handleSubmit}>Register</button>
             </div>
         </div>
     );

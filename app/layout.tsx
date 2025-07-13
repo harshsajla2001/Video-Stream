@@ -29,19 +29,15 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
-      <body
-        className={`${geistSans.variable} ${geistMono.variable} antialiased`}
-      >
+      <body className={`${geistSans.variable} ${geistMono.variable} antialiased`}>
         <ReduxProvider>
-
           <Provider>
             <SidebarProvider>
-              <main className="flex w-full h-screen flex-col">
+              <main className="flex flex-col w-full h-screen">
                 <TopNavBar />
-                <div className="flex ">
+                <div className="flex">
                   <AppSidebar />
                   {children}
-
                 </div>
               </main>
             </SidebarProvider>
